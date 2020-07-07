@@ -30,8 +30,8 @@ class PetsController < ApplicationController
     erb :'/pets/edit'
   end
 
-  post '/pets/:id' do 
-    # if !params[:pet].keys.include?("owner_ids")
+  patch '/pets/:id' do 
+    # unless params[:pet].keys.include?("owner_ids")
     # params[:pet]["owner_ids"] = []
     # end
     @pet = Pet.find(params[:id])
